@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<title>Kriti Gupta | Kritig02 | Kritig92 </title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #FFD4AD, #FF947D, #BD8EAF);
+    overflow: hidden;
+  }
+  
+  .pattern-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #FFD4AD, #FF947D, #BD8EAF);
+    pointer-events: none;
+  }
+  
+  .container {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1000px;
+    height: calc(100vh - 150px);
+    background: linear-gradient(to bottom right, #FFFFFFBF, #FFFFFF);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 20px 20px 30px 20px;    
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 4vh 4vw;
+    width: 50%;
+  }
+  
+  .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #FFFFFF;
+    margin-bottom: 1.5rem;
+    background: url('./images/profile.png'); /* Placeholder image */
+    background-size: cover;
+    justify-content: flex-start;
+  }
+  
+  .name {
+    color: #4C4F57;
+    font-family: "INTER", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.25;
+    letter-spacing: normal;
+    margin-bottom: 1.5rem;
+    justify-content: flex-start;
+  }
+  
+  .title {
+    color: #F29274;
+    font-family: "INTER", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+    justify-content: flex-start;
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    background-color: #F29274;
+    color: #FFFFFF;
+    height: 3.5rem;
+    padding: 0 2rem;
+    border: none;
+    border-radius: 0.625rem;
+    font-family: "INTER", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.75;
+    cursor: pointer;
+    transition: background-color 0.3s, background 0.3s;
+    transition: transform 0.3s ease;
+    width: auto;
+    margin: 0;
+  }
+  
+  .button:hover {
+    background-color: #F79B7E;
+    background: linear-gradient(to left right #FFC3A19E, #F29274);
+    transform: scale(1.1);
+  }
+  .image {
+    width: 60%;
+    background: url('./images/sideimage.JPEG'); /* Placeholder image */
+    background-size: cover;
+    border: 10px solid #FFFFFF;
+    border-radius: 20px 20px 30px 20px;    
+
+  }
+  .social-icons {
+    display: flex;
+    gap: 30px;
+    margin-top: 1.5rem;
+  }
+
+  .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #FFFFFF;
+    color: #F29274;
+    border-radius: 50%;
+    border: solid #F29274;
+    text-decoration: none;
+  }
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-95JYR8E1L4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-95JYR8E1L4');
+</script>
+
+</head>
+<body>
+<div class="pattern-overlay"></div>
+<div class="container">
+  <div class="details">
+    <div class="circle"></div>
+    <div class="name">Hey there, I'm Kriti! 👋</div>
+    <div class="title">I wear many hats – from testing software and analyzing data and business needs to now crafting awesome products 🚀. Let's chat and see how I can help make things happen!</div>
+    <button class="button" onclick="trackButtonClick(); location.href='mailto:mail@kriti.io' ">Get in touch!</button>
+        <div class="social-icons">
+      <a href="https://twitter.com/kriti212" onclick="trackSocialClick('Twitter')"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/Kritig02" onclick="trackSocialClick('Github')"><i class="fab fa-github"></i></a> 
+      <a href="https://www.linkedin.com/in/kriti-gupta-34450060/" onclick="trackSocialClick('Linkedin')"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/kritig02/" onclick="trackSocialClick('Instagram')"><i class="fab fa-instagram"></i></a>
+      <!-- <a href="mailto:mail@kriti.io"><i class="fas fa-envelope"></i></a> -->
+    </div>
+  </div>
+  <div class="image">
+  </div>
+</div>
+</body>
+</html>
+<script>
+  // Function to track "Get in touch" button click
+  function trackButtonClick(){
+    gtag('event', 'click', {
+      'event_category': 'Button Interaction',
+      'event_label': 'Get in touch'
+    });
+  }
+
+  // Function to track social icon clicks
+  function trackSocialClick(socialNetwork){
+    gtag('event', 'click', {
+      'event_category': 'Social Icon Interaction',
+      'event_label': socialNetwork
+    });
+  }
+</script>
